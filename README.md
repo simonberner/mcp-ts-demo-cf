@@ -53,3 +53,7 @@ To use this remote MCP server with your local MCP client, add this configuration
 If all goes well, you should see the tools become available in your local MCP client and be able to do something like this:
 
 ![example](example.png)
+
+## Good to know
+
+- [zod](https://github.com/colinhacks/zod?tab=readme-ov-file#introduction) is a TypeScript-first declaration and validation library.
