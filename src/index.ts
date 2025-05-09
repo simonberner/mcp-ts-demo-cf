@@ -2,8 +2,7 @@ import { McpAgent } from "agents/mcp";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 
-// Define our MCP agent with tools
-export class MyMCP extends McpAgent {
+export class McQueenMCP extends McpAgent {
   server = new McpServer({
     name: "mcp-ts-demo-cf",
     version: "1.0.0",
@@ -38,7 +37,8 @@ export class MyMCP extends McpAgent {
     });
 
     /*
-	Instead of passing the driveArgs Zod object directly as the schema, we now pass driveArgs.shape. This provides the raw schema definition that the @modelcontextprotocol/sdk expects,
+	Instead of passing the driveArgs Zod object directly as the schema, we now pass driveArgs.shape.
+  This provides the raw schema definition that the @modelcontextprotocol/sdk expects,
 	*/
     this.server.tool("drive", driveArgs.shape, async (args) => {
       return {
@@ -59,12 +59,12 @@ export default {
 
     if (url.pathname === "/sse" || url.pathname === "/sse/message") {
       // @ts-ignore
-      return MyMCP.serveSSE("/sse").fetch(request, env, ctx);
+      return McQueenMCP.serveSSE("/sse").fetch(request, env, ctx);
     }
 
     if (url.pathname === "/mcp") {
       // @ts-ignore
-      return MyMCP.serve("/mcp").fetch(request, env, ctx);
+      return McQueenMCP.serve("/mcp").fetch(request, env, ctx);
     }
 
     return new Response("Not found", { status: 404 });
