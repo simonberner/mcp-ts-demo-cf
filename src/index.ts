@@ -54,6 +54,13 @@ export class McQueenMCP extends McpAgent {
 }
 
 export default {
+  /*
+  Primary function that Cloudflare Workers use to process HTTP request.
+  It handles server send event and the http streaming.
+  In summary, this worker acts as a router, directing requests to /sse (and /sse/message)
+  to an SSE handler and requests to /mcp to an MCP handler, both managed by McQueenMCP.
+  All other requests receive a 404 error.
+*/
   fetch(request: Request, env: Env, ctx: ExecutionContext) {
     const url = new URL(request.url);
 
