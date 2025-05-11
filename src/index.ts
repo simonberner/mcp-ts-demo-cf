@@ -31,6 +31,7 @@ export class McQueenMCP extends McpAgent {
       };
     });
 
+    // Define the schema for the arguments (validation and type safety)
     const driveArgs = z.object({
       direction: z.enum(["left", "right", "forward", "backward"]),
       speed: z.number().min(0).max(100),
