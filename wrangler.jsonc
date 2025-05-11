@@ -13,15 +13,24 @@
 	"migrations": [
 		{
 			"new_sqlite_classes": [
-				"MyMCP"
+				"McQueenMCP"
 			],
 			"tag": "v1"
+		},
+		{
+			"renamed_classes": [
+				{
+					"from": "MyMCP",
+					"to": "McQueenMCP"
+				}
+			],
+			"tag": "v2"
 		}
 	],
 	"durable_objects": {
 		"bindings": [
 			{
-				"class_name": "MyMCP",
+				"class_name": "McQueenMCP",
 				"name": "MCP_OBJECT"
 			}
 		]
