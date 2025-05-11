@@ -54,6 +54,6 @@ If all goes well, you should see the tools become available in your local MCP cl
 
 ![example](example.png)
 
-## Good to know
+## Nice to know
 
-- [zod](https://github.com/colinhacks/zod?tab=readme-ov-file#introduction) is a TypeScript-first declaration and validation library.
+- [zod](https://github.com/colinhacks/zod?tab=readme-ov-file#introduction) is used to define the schema for the arguments of the MCPServer tools.
