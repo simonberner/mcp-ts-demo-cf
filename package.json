@@ -11,13 +11,13 @@
 		"cf-typegen": "wrangler types"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20250509.0",
+		"@cloudflare/workers-types": "^4.20250510.0",
 		"typescript": "^5.8.3",
 		"wrangler": "^4.14.4"
 	},
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "^1.11.1",
-		"agents": "^0.0.80",
+		"agents": "^0.0.82",
 		"zod": "^3.24.4"
 	}
 }
